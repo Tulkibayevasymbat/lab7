@@ -1,0 +1,13 @@
+import os
+
+file_name = "begimai.MP3"
+directory = "C:/Users/АНЭЛ/Desktop/lab7"  # Укажите путь к вашей директории
+
+file_path = os.path.join(directory, file_name)
+
+if not os.path.exists(file_path):
+    with open(file_path, "w"):  # Открываем файл для записи
+        pass  # Просто создаем файл без каких-либо дополнительных действий
+    print(f"Файл {file_name} успешно создан в директории {directory}.")
+else:
+    print(f"Файл {file_name} уже существует в директории {directory}.")
